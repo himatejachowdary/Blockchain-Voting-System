@@ -27,16 +27,16 @@ const Header = () => {
   };
 
   return (
-    <header className="sticky top-0 z-50 w-full border-b bg-gradient-card backdrop-blur-lg supports-[backdrop-filter]:bg-background/60">
+    <header className="sticky top-0 z-50 w-full border-b bg-gradient-card backdrop-blur-xl supports-[backdrop-filter]:bg-background/80 border-border/50">
       <div className="container mx-auto px-4 py-4">
         <div className="flex items-center justify-between">
           {/* Logo and Brand */}
           <div className="flex items-center gap-3">
-            <div className="flex items-center justify-center w-10 h-10 bg-gradient-primary rounded-lg shadow-glow">
+            <div className="flex items-center justify-center w-10 h-10 bg-gradient-cyber rounded-lg shadow-glow">
               <Vote className="w-6 h-6 text-primary-foreground" />
             </div>
             <div>
-              <h1 className="text-xl font-bold bg-gradient-primary bg-clip-text text-transparent">
+              <h1 className="text-xl font-bold bg-gradient-cyber bg-clip-text text-transparent">
                 BlockVote
               </h1>
               <p className="text-xs text-muted-foreground">Decentralized Voting System</p>
@@ -58,7 +58,7 @@ const Header = () => {
 
             {/* Wallet Connection */}
             {isConnected && account ? (
-              <Card className="px-4 py-2 bg-gradient-card shadow-card">
+              <Card className="px-4 py-2 bg-gradient-card shadow-cyber border-primary/20">
                 <div className="flex items-center gap-3">
                   <div className="flex items-center gap-2">
                     <div className="w-2 h-2 bg-accent rounded-full animate-pulse"></div>

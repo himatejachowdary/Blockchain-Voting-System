@@ -47,15 +47,17 @@ const HeroSection = () => {
 
   return (
     <div className="relative min-h-screen flex items-center justify-center overflow-hidden">
-      {/* Background Elements */}
+      {/* Enhanced Background Elements */}
       <div className="absolute inset-0 bg-gradient-hero"></div>
-      <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_20%,rgba(120,119,198,0.3),transparent_50%)]"></div>
-      <div className="absolute inset-0 bg-[radial-gradient(circle_at_70%_80%,rgba(120,198,178,0.2),transparent_50%)]"></div>
+      <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_20%,rgba(33,150,243,0.3),transparent_50%)]"></div>
+      <div className="absolute inset-0 bg-[radial-gradient(circle_at_70%_80%,rgba(76,175,80,0.2),transparent_50%)]"></div>
+      <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_50%,rgba(156,39,176,0.1),transparent_70%)]"></div>
       
-      {/* Floating Elements */}
-      <div className="absolute top-20 left-10 w-20 h-20 bg-primary/10 rounded-full blur-xl animate-pulse-glow"></div>
-      <div className="absolute bottom-32 right-16 w-32 h-32 bg-accent/10 rounded-full blur-2xl animate-pulse-glow" style={{ animationDelay: '1s' }}></div>
-      <div className="absolute top-1/2 left-20 w-16 h-16 bg-trust/10 rounded-full blur-lg animate-pulse-glow" style={{ animationDelay: '2s' }}></div>
+      {/* Enhanced Floating Elements */}
+      <div className="absolute top-20 left-10 w-20 h-20 bg-primary/20 rounded-full blur-xl animate-pulse-glow shadow-glow"></div>
+      <div className="absolute bottom-32 right-16 w-32 h-32 bg-accent/20 rounded-full blur-2xl animate-pulse-glow shadow-neon" style={{ animationDelay: '1s' }}></div>
+      <div className="absolute top-1/2 left-20 w-16 h-16 bg-trust/20 rounded-full blur-lg animate-pulse-glow shadow-cyber" style={{ animationDelay: '2s' }}></div>
+      <div className="absolute top-1/3 right-1/3 w-24 h-24 bg-warning/15 rounded-full blur-2xl animate-pulse-glow" style={{ animationDelay: '3s' }}></div>
 
       <div className="relative z-10 container mx-auto px-4 py-20">
         <div className="grid lg:grid-cols-2 gap-12 items-center">
@@ -121,12 +123,12 @@ const HeroSection = () => {
 
           {/* Right Column - Feature Cards */}
           <div className="space-y-6 animate-fade-in" style={{ animationDelay: '0.3s' }}>
-            {/* Main Feature Card */}
-            <Card className="bg-gradient-card shadow-glow border-primary/20 hover:shadow-trust transition-all duration-500">
+            {/* Main Feature Card - Enhanced */}
+            <Card className="bg-gradient-card shadow-cyber border-primary/20 hover:shadow-glow transition-all duration-500 hover:scale-105">
               <CardContent className="p-8">
                 <div className="space-y-6">
                   <div className="flex items-center gap-4">
-                    <div className="w-12 h-12 bg-gradient-primary rounded-xl flex items-center justify-center shadow-glow">
+                    <div className="w-12 h-12 bg-gradient-cyber rounded-xl flex items-center justify-center shadow-glow">
                       <Shield className="w-6 h-6 text-primary-foreground" />
                     </div>
                     <div>

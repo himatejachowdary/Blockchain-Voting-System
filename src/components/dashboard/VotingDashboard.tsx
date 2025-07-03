@@ -4,6 +4,10 @@ import { Button } from '@/components/ui/button';
 import { Badge } from '@/components/ui/badge';
 import { Progress } from '@/components/ui/progress';
 import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
+import CreateElectionModal from '@/components/modals/CreateElectionModal';
+import VotingModal from '@/components/modals/VotingModal';
+import ElectionAnalytics from '@/components/analytics/ElectionAnalytics';
+import MetaMaskConnection from '@/components/wallet/MetaMaskConnection';
 import { useWeb3 } from '@/contexts/Web3Context';
 import { 
   Vote, 
@@ -102,17 +106,7 @@ const VotingDashboard = () => {
   if (!isConnected) {
     return (
       <div className="min-h-[60vh] flex items-center justify-center">
-        <Card className="p-8 text-center bg-gradient-card shadow-card max-w-md">
-          <CardContent className="space-y-4">
-            <div className="w-16 h-16 bg-gradient-primary rounded-full flex items-center justify-center mx-auto">
-              <Wallet className="w-8 h-8 text-primary-foreground" />
-            </div>
-            <h3 className="text-xl font-semibold">Connect Your Wallet</h3>
-            <p className="text-muted-foreground">
-              Please connect your MetaMask wallet to access the voting dashboard and participate in elections.
-            </p>
-          </CardContent>
-        </Card>
+        <MetaMaskConnection />
       </div>
     );
   }
@@ -173,21 +167,19 @@ const VotingDashboard = () => {
       {/* Main Dashboard */}
       <Tabs defaultValue="elections" className="space-y-6">
         <div className="flex items-center justify-between">
-          <TabsList className="grid w-full max-w-md grid-cols-2">
+          <TabsList className="grid w-full max-w-md grid-cols-3">
             <TabsTrigger value="elections">Elections</TabsTrigger>
             <TabsTrigger value="results">Results</TabsTrigger>
+            <TabsTrigger value="analytics">Analytics</TabsTrigger>
           </TabsList>
           
-          <Button variant="blockchain" className="gap-2">
-            <PlusCircle className="w-4 h-4" />
-            Create Election
-          </Button>
+          <CreateElectionModal />
         </div>
 
         <TabsContent value="elections" className="space-y-6">
           <div className="grid gap-6">
             {elections.map((election) => (
-              <Card key={election.id} className="bg-gradient-card shadow-card hover:shadow-trust transition-all duration-300">
+              <Card key={election.id} className="bg-gradient-card shadow-card hover:shadow-cyber transition-all duration-300 border-border/50">
                 <CardHeader>
                   <div className="flex items-start justify-between">
                     <div className="space-y-2">
@@ -251,10 +243,15 @@ const VotingDashboard = () => {
                   {/* Actions */}
                   <div className="flex gap-3">
                     {election.status === 'active' && (
-                      <Button variant="trust" className="gap-2">
-                        <Vote className="w-4 h-4" />
-                        Vote Now
-                      </Button>
+                      <VotingModal
+                        election={election}
+                        trigger={
+                          <Button variant="trust" className="gap-2 shadow-glow">
+                            <Vote className="w-4 h-4" />
+                            Vote Now
+                          </Button>
+                        }
+                      />
                     )}
                     <Button variant="outline" className="gap-2">
                       <Shield className="w-4 h-4" />
@@ -268,7 +265,7 @@ const VotingDashboard = () => {
         </TabsContent>
 
         <TabsContent value="results" className="space-y-6">
-          <Card className="bg-gradient-card shadow-card">
+          <Card className="bg-gradient-card shadow-card border-border/50">
             <CardHeader>
               <CardTitle className="flex items-center gap-2">
                 <BarChart3 className="w-5 h-5" />
@@ -284,6 +281,12 @@ const VotingDashboard = () => {
               </p>
             </CardContent>
           </Card>
+        </TabsContent>
+
+        <TabsContent value="analytics" className="space-y-6">
+          {elections.length > 0 && (
+            <ElectionAnalytics election={elections[0]} />
+          )}
         </TabsContent>
       </Tabs>
     </div>

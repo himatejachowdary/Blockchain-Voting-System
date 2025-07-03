@@ -6,66 +6,72 @@
 
 @layer base {
   :root {
-    /* Core Background & Foreground */
-    --background: 220 20% 97%;
-    --foreground: 220 25% 12%;
+    /* Core Background & Foreground - Modern Dark Gradient Theme */
+    --background: 240 15% 8%;
+    --foreground: 220 15% 95%;
 
-    /* Card System */
-    --card: 0 0% 100%;
-    --card-foreground: 220 25% 12%;
+    /* Card System - Elevated Glass Effect */
+    --card: 240 12% 12%;
+    --card-foreground: 220 15% 92%;
 
     /* Popover System */
-    --popover: 0 0% 100%;
-    --popover-foreground: 220 25% 12%;
+    --popover: 240 12% 12%;
+    --popover-foreground: 220 15% 92%;
 
-    /* Primary Brand - Deep Blockchain Blue */
-    --primary: 220 70% 25%;
-    --primary-foreground: 0 0% 100%;
-    --primary-glow: 220 85% 45%;
+    /* Primary Brand - Electric Blue with Glow */
+    --primary: 210 100% 60%;
+    --primary-foreground: 240 15% 8%;
+    --primary-glow: 210 100% 70%;
+    --primary-dark: 210 100% 45%;
 
-    /* Secondary - Tech Gray */
-    --secondary: 220 15% 95%;
-    --secondary-foreground: 220 25% 12%;
+    /* Secondary - Cosmic Purple */
+    --secondary: 260 60% 25%;
+    --secondary-foreground: 220 15% 95%;
 
-    /* Muted - Subtle Gray */
-    --muted: 220 15% 96%;
-    --muted-foreground: 220 12% 55%;
+    /* Muted - Subtle Dark Gray */
+    --muted: 240 10% 18%;
+    --muted-foreground: 220 12% 65%;
 
-    /* Accent - Blockchain Green */
-    --accent: 142 70% 45%;
-    --accent-foreground: 0 0% 100%;
+    /* Accent - Neon Green */
+    --accent: 120 100% 50%;
+    --accent-foreground: 240 15% 8%;
 
-    /* Trust Blue - For verification elements */
-    --trust: 210 85% 55%;
-    --trust-foreground: 0 0% 100%;
+    /* Trust Blue - Cyber Blue */
+    --trust: 200 100% 55%;
+    --trust-foreground: 240 15% 8%;
 
-    /* Warning - For important actions */
-    --warning: 38 92% 50%;
-    --warning-foreground: 0 0% 100%;
+    /* Warning - Electric Orange */
+    --warning: 25 100% 55%;
+    --warning-foreground: 240 15% 8%;
 
-    /* Destructive */
-    --destructive: 0 75% 55%;
-    --destructive-foreground: 0 0% 100%;
+    /* Destructive - Neon Red */
+    --destructive: 0 100% 55%;
+    --destructive-foreground: 240 15% 8%;
 
-    /* Borders & Inputs */
-    --border: 220 20% 88%;
-    --input: 220 20% 94%;
-    --ring: 220 70% 25%;
+    /* Borders & Inputs - Glowing Borders */
+    --border: 240 20% 25%;
+    --input: 240 15% 15%;
+    --ring: 210 100% 60%;
 
-    /* Gradients */
-    --gradient-primary: linear-gradient(135deg, hsl(var(--primary)), hsl(var(--primary-glow)));
-    --gradient-trust: linear-gradient(135deg, hsl(var(--trust)), hsl(var(--accent)));
-    --gradient-card: linear-gradient(145deg, hsl(0 0% 100%), hsl(220 15% 98%));
-    --gradient-hero: linear-gradient(135deg, hsl(var(--primary)), hsl(220 85% 15%));
+    /* Advanced Gradients - Cyberpunk Style */
+    --gradient-primary: linear-gradient(135deg, hsl(210 100% 60%), hsl(260 100% 60%));
+    --gradient-secondary: linear-gradient(135deg, hsl(260 60% 25%), hsl(300 60% 35%));
+    --gradient-trust: linear-gradient(135deg, hsl(200 100% 55%), hsl(120 100% 50%));
+    --gradient-card: linear-gradient(145deg, hsl(240 12% 12%), hsl(240 15% 8%));
+    --gradient-hero: linear-gradient(135deg, hsl(240 15% 8%), hsl(260 30% 15%));
+    --gradient-cyber: linear-gradient(45deg, hsl(210 100% 60%) 0%, hsl(260 100% 60%) 50%, hsl(300 100% 60%) 100%);
 
-    /* Shadows */
-    --shadow-card: 0 4px 12px -2px hsl(var(--primary) / 0.08);
-    --shadow-trust: 0 8px 32px -8px hsl(var(--trust) / 0.3);
-    --shadow-glow: 0 0 40px hsl(var(--primary-glow) / 0.2);
+    /* Advanced Shadows - Neon Glow Effects */
+    --shadow-card: 0 8px 32px -8px hsl(240 100% 5% / 0.6);
+    --shadow-trust: 0 0 30px hsl(200 100% 55% / 0.3);
+    --shadow-glow: 0 0 50px hsl(210 100% 60% / 0.4);
+    --shadow-neon: 0 0 20px hsl(120 100% 50% / 0.5);
+    --shadow-cyber: 0 0 40px hsl(260 100% 60% / 0.3);
 
-    /* Animations */
+    /* Animations - Smooth Cyberpunk */
     --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
     --transition-bounce: all 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+    --transition-glow: all 0.5s ease-in-out;
 
     --radius: 0.5rem;
 
@@ -87,52 +93,57 @@
   }
 
   .dark {
-    /* Dark Mode - Professional Dark Theme */
-    --background: 220 25% 8%;
-    --foreground: 220 15% 92%;
+    /* Dark Mode - Enhanced Cyberpunk Theme */
+    --background: 240 15% 4%;
+    --foreground: 220 15% 98%;
 
-    --card: 220 20% 11%;
-    --card-foreground: 220 15% 92%;
+    --card: 240 12% 8%;
+    --card-foreground: 220 15% 95%;
 
-    --popover: 220 20% 11%;
-    --popover-foreground: 220 15% 92%;
+    --popover: 240 12% 8%;
+    --popover-foreground: 220 15% 95%;
 
-    --primary: 220 85% 65%;
-    --primary-foreground: 220 25% 8%;
-    --primary-glow: 220 95% 75%;
+    --primary: 210 100% 65%;
+    --primary-foreground: 240 15% 4%;
+    --primary-glow: 210 100% 75%;
+    --primary-dark: 210 100% 40%;
 
-    --secondary: 220 15% 15%;
-    --secondary-foreground: 220 15% 85%;
+    --secondary: 260 60% 20%;
+    --secondary-foreground: 220 15% 95%;
 
-    --muted: 220 15% 13%;
-    --muted-foreground: 220 12% 65%;
+    --muted: 240 10% 12%;
+    --muted-foreground: 220 12% 70%;
 
-    --accent: 142 70% 55%;
-    --accent-foreground: 220 25% 8%;
+    --accent: 120 100% 55%;
+    --accent-foreground: 240 15% 4%;
 
-    --trust: 210 85% 65%;
-    --trust-foreground: 220 25% 8%;
+    --trust: 200 100% 60%;
+    --trust-foreground: 240 15% 4%;
 
-    --warning: 38 92% 60%;
-    --warning-foreground: 220 25% 8%;
+    --warning: 25 100% 60%;
+    --warning-foreground: 240 15% 4%;
 
-    --destructive: 0 75% 65%;
-    --destructive-foreground: 220 25% 8%;
+    --destructive: 0 100% 60%;
+    --destructive-foreground: 240 15% 4%;
 
-    --border: 220 20% 18%;
-    --input: 220 20% 16%;
-    --ring: 220 85% 65%;
+    --border: 240 20% 20%;
+    --input: 240 15% 10%;
+    --ring: 210 100% 65%;
 
-    /* Dark Gradients */
-    --gradient-primary: linear-gradient(135deg, hsl(var(--primary)), hsl(var(--primary-glow)));
-    --gradient-trust: linear-gradient(135deg, hsl(var(--trust)), hsl(var(--accent)));
-    --gradient-card: linear-gradient(145deg, hsl(220 20% 12%), hsl(220 15% 10%));
-    --gradient-hero: linear-gradient(135deg, hsl(220 85% 25%), hsl(220 90% 8%));
+    /* Enhanced Dark Gradients */
+    --gradient-primary: linear-gradient(135deg, hsl(210 100% 65%), hsl(260 100% 65%));
+    --gradient-secondary: linear-gradient(135deg, hsl(260 60% 20%), hsl(300 60% 30%));
+    --gradient-trust: linear-gradient(135deg, hsl(200 100% 60%), hsl(120 100% 55%));
+    --gradient-card: linear-gradient(145deg, hsl(240 12% 8%), hsl(240 15% 4%));
+    --gradient-hero: linear-gradient(135deg, hsl(240 15% 4%), hsl(260 30% 10%));
+    --gradient-cyber: linear-gradient(45deg, hsl(210 100% 65%) 0%, hsl(260 100% 65%) 50%, hsl(300 100% 65%) 100%);
 
-    /* Dark Shadows */
-    --shadow-card: 0 4px 16px -4px hsl(0 0% 0% / 0.3);
-    --shadow-trust: 0 8px 32px -8px hsl(var(--trust) / 0.4);
-    --shadow-glow: 0 0 60px hsl(var(--primary-glow) / 0.15);
+    /* Enhanced Dark Shadows */
+    --shadow-card: 0 8px 40px -8px hsl(240 100% 2% / 0.8);
+    --shadow-trust: 0 0 40px hsl(200 100% 60% / 0.4);
+    --shadow-glow: 0 0 60px hsl(210 100% 65% / 0.5);
+    --shadow-neon: 0 0 30px hsl(120 100% 55% / 0.6);
+    --shadow-cyber: 0 0 50px hsl(260 100% 65% / 0.4);
     --sidebar-background: 240 5.9% 10%;
     --sidebar-foreground: 240 4.8% 95.9%;
     --sidebar-primary: 224.3 76.3% 48%;
