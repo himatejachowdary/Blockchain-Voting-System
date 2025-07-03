@@ -1,4 +1,4 @@
-# 📘 LearnMe: Beginner's Guide to Blockchain Voting System
+# 📘 Learn: Beginner's Guide to Blockchain Voting System
 
 Welcome! This file helps **new developers** or **non-blockchain users** understand how the project works and how to run it step by step.
 
