@@ -1,48 +1,61 @@
-# Blockchain Voting System
+# 🗳️ Blockchain Voting System
 
-A decentralized voting system built on the  blockchain that ensures transparency, immutability, and fairness. Designed for secure and tamper-proof elections.
+A decentralized voting platform built on Ethereum that ensures secure, transparent, and tamper-proof elections.
 
-## 🚀 Features
+## 📌 Features
 
-- 🗳️ Transparent and secure voting
-- 📜 Smart contract-based logic
-- 👥 Voter authentication
-- 📦 Decentralized backend using Ethereum
-- 🔐 Immutable records
+- 🛡️ Transparent & tamper-proof voting
+- 🧠 Smart contract-powered logic
+- 🪪 MetaMask wallet login
+- 📊 Real-time vote tallying & analytics
+- 🌐 Deployed using Vite + React + TypeScript
+
+## 🚀 Demo
+
+Coming soon! (You can add screenshots or a screen recording later)
+
+## 🛠️ Technologies Used
+
+| Layer        | Tech Stack                    |
+|--------------|-------------------------------|
+| Blockchain   | Ethereum, Solidity            |
+| Smart Contract Framework | Hardhat or Truffle |
+| Frontend     | React.js, Vite, TypeScript    |
+| UI           | Tailwind CSS                  |
+| Wallet       | MetaMask                      |
+| Web3 Library | Ethers.js or Web3.js          |
 
 ## 📁 Project Structure
 
+📦 blockchain-voting-system/
+├── public/ # Static assets
+├── src/ # Frontend logic
+│ ├── components/ # Modular UI components
+│ ├── hooks/ # Custom React hooks
+│ ├── pages/ # Routes like Home, NotFound
+│ ├── contexts/ # React Context for Web3
+├── package.json # npm scripts & deps
+├── tailwind.config.ts # Tailwind setup
+├── vite.config.ts # Vite bundler config
+└── README.md # Project documentation
+
+
+## 💻 Getting Started
+
+### Prerequisites:
+- Node.js + npm
+- MetaMask extension
+- Ganache or testnet access
+
+### Local Setup:
+
 ```bash
-├── contracts/         # Solidity smart contracts
-├── migrations/        # Deployment scripts for Truffle
-├── src/               # Frontend source code (React or other)
-├── test/              # Smart contract test cases
-├── build/             # Compiled contract artifacts
-├── truffle-config.js  # Truffle configuration
-└── README.md
-
-
-###   💻 Tech Stack
-
-React + TypeScript
-
-TailwindCSS for styling
-
-Vite as the frontend bundler
-
-MetaMask & Web3 for Ethereum interactions
-
-Modular UI Components
-
-🔧 Getting Started
-
-# Clone the repository
-git clone https://github.com/your-username/Blockchain Voting System.git
-cd transparent-Blockchain Voting System
-
-# Install dependencies
+git clone https://github.com/himatejachowdary/Blockchain-Voting-System.git
+cd Blockchain-Voting-System
 npm install
-
-# Start development server
 npm run dev
 
+
+
+
+Make sure MetaMask is connected to the same Ethereum network!
