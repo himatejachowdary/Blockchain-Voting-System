@@ -47,50 +47,45 @@ cd Blockchain-Voting-System
 
 npm install
 npm run dev
-Make sure MetaMask is set to the same network (Localhost 8545 if using Ganache).
+```
+> Make sure MetaMask is set to the same network (Localhost 8545 if using Ganache).
 
-💡 What Happens Under the Hood?
-1.User connects wallet (MetaMask)
+### 💡 What Happens Under the Hood?
+1. User connects wallet (MetaMask)
 
-2.Smart contract is deployed (via Truffle/Hardhat)
+1. Smart contract is deployed (via Truffle/Hardhat)
 
-3.Admin creates an election
+1. Admin creates an election
 
-4.Voters submit votes via frontend
+1. Voters submit votes via frontend
 
-5.Votes are stored on Ethereum (permanently)
+1. Votes are stored on Ethereum (permanently)
 
-6.Tallying is done automatically via contract functions
-
-
-🔗 Smart Contract Concepts
-Immutable: Cannot be changed after deployment
-
-Decentralized: No central admin can cheat
-
-Self-executing: No backend server required to count or store votes
+1. Tallying is done automatically via contract functions
 
 
+### 🔗 Smart Contract Concepts
+- Immutable: Cannot be changed after deployment
 
+- Decentralized: No central admin can cheat
+
+- Self-executing: No backend server required to count or store votes
 
 
 
-📚 Want to Learn More?
-Ethereum.org Beginner Guide
-
-Solidity Docs
-
-CryptoZombies (Fun learning)
-
-Ethers.js Docs
-
-Happy Building! 🚀
-
-Decentralized: No central admin can cheat
-
-Self-executing: No backend server required to count or store votes
 
 
+
+### 📚 Want to Learn More?
+- Ethereum.org Beginner Guide
+
+- Solidity Docs
+
+- CryptoZombies (Fun learning)
+
+- Ethers.js Docs
+
+`Happy Building! 🚀`
 
 
 ---
@@ -101,5 +96,5 @@ Self-executing: No backend server required to count or store votes
 git add LEARNME.md
 git commit -m "Add beginner-friendly LEARNME.md"
 git push origin main
-
+```
 

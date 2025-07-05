@@ -54,8 +54,7 @@ git clone https://github.com/himatejachowdary/Blockchain-Voting-System.git
 cd Blockchain-Voting-System
 npm install
 npm run dev
+```
 
 
-
-
-Make sure MetaMask is connected to the same Ethereum network!
+> Make sure MetaMask is connected to the same Ethereum network!
